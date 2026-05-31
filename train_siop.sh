@@ -7,7 +7,7 @@
 #   VAL_FILE=<DATA_DIR>/test_multiturn.parquet
 #
 # Optional:
-#   CONDA_ENV=verl-0406
+#   CONDA_ENV=siop
 #   OUTPUT_DIR=<OUTPUT_DIR>/siop
 #   RETRIEVER_URL=http://localhost:8000/retrieve
 #   SIOP_SCORER_URL=http://localhost:8390
@@ -18,7 +18,7 @@ set -euo pipefail
 : "${TRAIN_FILE:?Set TRAIN_FILE to the training parquet file.}"
 : "${VAL_FILE:?Set VAL_FILE to the validation parquet file.}"
 
-CONDA_ENV="${CONDA_ENV:-verl-0406}"
+CONDA_ENV="${CONDA_ENV:-siop}"
 OUTPUT_DIR="${OUTPUT_DIR:-checkpoints/siop}"
 LOG_DIR="${LOG_DIR:-logs}"
 RETRIEVER_URL="${RETRIEVER_URL:-http://localhost:8000/retrieve}"

@@ -12,7 +12,7 @@ set -euo pipefail
 : "${VAL_FILE:?Set VAL_FILE to the validation parquet file.}"
 
 CKPT="${1:?Usage: MODEL_PATH=<MODEL_PATH> VAL_FILE=<VAL_FILE> bash eval_siop.sh <CHECKPOINT_PATH>}"
-CONDA_ENV="${CONDA_ENV:-verl-0406}"
+CONDA_ENV="${CONDA_ENV:-siop}"
 OUTPUT_DIR="${OUTPUT_DIR:-checkpoints/siop_eval}"
 LOG_DIR="${LOG_DIR:-logs}"
 RETRIEVER_URL="${RETRIEVER_URL:-http://localhost:8000/retrieve}"

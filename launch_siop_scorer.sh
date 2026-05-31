@@ -13,7 +13,7 @@ set -euo pipefail
 
 : "${SIOP_MODEL:?Set SIOP_MODEL to the scorer model path or Hugging Face id.}"
 
-CONDA_ENV="${CONDA_ENV:-verl-0406}"
+CONDA_ENV="${CONDA_ENV:-siop}"
 PORT="${SIOP_PORT:-8390}"
 NUM_GPUS="${SIOP_NUM_GPUS:-8}"
 GPU_MEM="${SIOP_GPU_MEM:-0.15}"
