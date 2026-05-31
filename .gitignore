@@ -1,0 +1,80 @@
+# Generated artifacts and local state
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage*
+htmlcov/
+*.log
+*.lock
+
+# Local data, model outputs, checkpoints, and caches
+/data/
+/dataset/
+/logs/
+/log/
+/outputs/
+/wandb/
+/cache/
+/search_cache/
+/checkpoints/
+**/checkpoints/
+**/*.ckpt
+**/*.pt
+**/*.safetensors
+**/*.parquet
+**/*.tar.gz
+**/wget-log
+
+# Local/editor/runtime files
+.env
+.python-version
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+.codex
+.agents/
+.claude/
+CLAUDE.md
+Claude Conversations/
+
+# Packaging/build outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+tmp/
+var/
+
+# Public branch excludes upstream examples and private experiment wrappers.
+/docker/
+/examples/
+/recipe/
+/scripts/
+/tests/
+/tools_server/
+/eval_qwen3.sh
+/train_siop_auto.sh
+/.readthedocs.yaml
+
+# Keep only the compact SIOP public docs in this branch.
+/docs/*
+!/docs/
+!/docs/SIOP_USAGE.md
+
+# Exclude non-SIOP experimental modules from the public snapshot.
+/verl/experimental/*
+!/verl/experimental/
+!/verl/experimental/__init__.py
+!/verl/experimental/agent_loop/
+
+# Generated trainer configs are reproducible and contain local defaults.
+/verl/trainer/config/_generated_*.yaml
+
+# Paper working directory is separate; keep paper.md only.
+/paper/

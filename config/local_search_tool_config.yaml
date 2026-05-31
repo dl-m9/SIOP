@@ -1,0 +1,22 @@
+tools:
+  - class_name: verl.tools.local_search_tool.LocalSearchTool
+    config:
+      type: native
+      retrieval_url: "http://localhost:8000/retrieve"
+      search_top_k: 3
+      request_timeout: 10.0
+    tool_schema:
+      type: function
+      function:
+        name: web_search
+        description: Searches the web for relevant information based on the given query.
+        parameters:
+          type: object
+          properties:
+            query:
+              type: array
+              items:
+                type: string
+              description: A list of search queries. The tool will return search results for each query.
+          required:
+            - query
