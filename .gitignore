@@ -75,6 +75,3 @@ var/
 
 # Generated trainer configs are reproducible and contain local defaults.
 /verl/trainer/config/_generated_*.yaml
-
-# Paper working directory is separate; keep paper.md only.
-/paper/
